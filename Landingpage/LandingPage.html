@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontawesome cdn -->
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Gymedari Gym</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="Landing.css" type="text/css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="">Gymedari Gym</a></div>
+            <ul class="links">
+                <li><a href="about">About</a></li>
+                <li><a href="Services">Services</a></li>
+                <li><a href="Contact">Contact Us</a></li>
+                <li><a href="Call">Get Quote</a></li>
+            </ul>
+            <a href="#" class="action_btn">Join Now</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars fa-fade"></i>
+            </div>
+        </div>
+        
+        <div class="dropdown_menu">
+            <li><a href="about">About</a></li>
+            <li><a href="Services">Services</a></li>
+            <li><a href="Contact">Contact Us</a></li>
+            <li><a href="Quote">Get Quote</a></li>
+            <li><a href="#" class="action_btn">Join Now</a></li>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="screen">
+        <section class="section1">
+            <div class="heading">
+                <h1>Gymedari Gym</h1>
+                <p>The best Gym in Huda</p>
+                <p>
+                    "You have the power to change your life & We’re here to help you reach your goals."
+                </p> 
+            </div>
+            <button class="btn">Get in shape with us</button>
+            <img src="https://lh3.googleusercontent.com/p/AF1QipOPqsE_3JBW6up-8gQcq8mzj1ZwblYswuMb8IMA=w1080-h608-p-no-v0" alt="gym-icon">
+        </section>
+
+        <!-- SECTION 2 -->
+
+        <section class="section2">
+            <h1>Pricing</h1>
+            <div class="boxes">
+                <div class="box">
+                    <h2>Free</h2>
+                    <ul>
+                        <li class="highlighted">₹0/month</li>
+                        <li>0 users included</li>
+                        <li>Access to Gym</li>
+                        <li>No Trainer</li>
+                        <li>No Sports Facility</li>
+                        <li><button class="signup_btn">Join Now</button></li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <h2>Basic</h2>
+                    <ul>
+                        <li class="highlighted">₹500/month</li>
+                        <li>1 users included</li>
+                        <li>Access to Gym</li>
+                        <li>No Trainer</li>
+                        <li>No Sports Facility</li>
+                        <li><button class="signup_btn">Join Now</button></li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <h2>Pro</h2>
+                    <ul>
+                        <li class="highlighted">₹1500/month</li>
+                        <li>2 users included</li>
+                        <li>Access to Gym</li>
+                        <li>Access to Trainer</li>
+                        <li>Sports Facility</li>
+                        <li><button class="signup_btn">Join Now</button></li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- section 3 -->
+        
+        <section class="section3">
+            <h1>Compare Plans</h1>
+            <div class="plantable">
+                <table class="table text-center">
+                  <thead>
+                    <tr>
+                      <th></th><th>Free</th>
+                      <th>Basic</th>
+                      <th>Pro</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row" class="text-start">Public</th>
+                      <td>Yes</svg></td>
+                      <td>Yes</svg></td>
+                      <td>Yes</svg></td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="text-start">Private</th>
+                      <td>-</td>
+                      <td>Yes</svg></td>
+                      <td>Yes</svg></td>
+                    </tr>
+                  </tbody>
+          
+                  <tbody>
+                    <tr>
+                      <th scope="row" class="text-start">Permissions</th>
+                      <td>Yes</svg></td>
+                      <td>Yes</svg></td>
+                      <td>Yes</svg></td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="text-start">Sharing</th>
+                      <td>-</td>
+                      <td>Yes</svg></td>
+                      <td>Yes</svg></td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="text-start">Unlimited members</th>
+                      <td>-</td>
+                      <td>Yes</svg></td>
+                      <td>Yes</svg></td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="text-start">Extra security</th>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>Yes</svg></td>
+                    </tr>
+                  </tbody>
+                </table>
+        </section>
+    </main>
+    <hr>
+
+    <footer>
+        Copyright &copy; GymedariGym.com | All rights reserved
+    </footer>
+
+    <script>
+        const toggleBtn  = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')   
+
+        toggleBtn.onclick= function(){
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+            toggleBtnIcon.classList = isOpen 
+            ? 'fa-solid fa-xmark' 
+            : 'fa-solid fa-bars fa-fade'
+        }
+    </script>
+</body>
+</html>
